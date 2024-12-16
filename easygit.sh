@@ -1,9 +1,11 @@
 #!/bin/bash
 
+REMOTE_URL= $1
+
 git init && git symbolic-ref HEAD refs/heads/main
 git config --global init.defaultBranch main
 
-git remote add origin https://github.com/matesuu/easygit.git
+git remote add origin $REMOTE_URL
 git remote -v
 
 git status
